@@ -185,7 +185,10 @@ const NaiveBayesDemo = () => {
               <div className="mt-6 p-4 bg-gray-700 rounded-lg">
                 <div className="text-center font-medium mb-2">Bayes Theorem</div>
                 <div className="text-sm text-center text-gray-300">
-                  P(Spam|Words) = P(Spam) × P(Word₁|Spam) × P(Word₂|Spam) × ...
+                  P(Spam|Words) = [P(Spam) × ∏ P(Word<sup>i</sup>|Spam)] / P(Words)
+                </div>
+                <div className="text-sm text-center text-gray-300 mt-1">
+                  where P(Words) = P(Spam) × P(Words|Spam) + P(Ham) × P(Words|Ham)
                 </div>
               </div>
             </div>
