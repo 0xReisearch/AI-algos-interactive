@@ -1,10 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Brain } from 'lucide-react';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import NaiveBayesDemo from './algorithms/naive-bayes/NaiveBayesDemo';
 
 function App() {
   return (
-    <Router basename="/AI-algos-interactive">
+    <HashRouter>
       <div className="min-h-screen bg-gray-900">
         <nav className="bg-gray-800 p-4">
           <div className="max-w-7xl mx-auto flex items-center gap-2">
@@ -33,7 +32,7 @@ function App() {
           <Route path="/naive-bayes" element={<NaiveBayesDemo />} />
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
