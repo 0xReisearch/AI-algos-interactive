@@ -1,4 +1,4 @@
-# AI Algorithms Interactive
+# Interactive AI Algorithms
 
 An interactive visualization platform for understanding AI/ML algorithms. Each algorithm is presented with real-time visualization and interactive elements to help users understand how they work.
 
