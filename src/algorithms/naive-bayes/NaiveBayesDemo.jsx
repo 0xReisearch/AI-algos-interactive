@@ -3,7 +3,7 @@ import { Brain, Calculator, Database, ArrowRight } from 'lucide-react';
 import WordDispersionChart from './WordDispersionChart';
 
 const NaiveBayesDemo = () => {
-  const [inputText, setInputText] = useState('free airdrop claim now');
+  const [inputText, setInputText] = useState('BTC shows strong support at the current price level');
   const [isAnimating, setIsAnimating] = useState(false);
   
   const trainingData = {
