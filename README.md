@@ -1,8 +1,35 @@
-# React + Vite
+# AI Algorithms Interactive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive visualization platform for understanding AI/ML algorithms. Each algorithm is presented with real-time visualization and interactive elements to help users understand how they work.
 
-Currently, two official plugins are available:
+## Current Algorithms
+- **Naive Bayes Text Classifier**: Interactive demonstration of text classification with probabilities visualization
+- (More algorithms coming soon...)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
+Visit [https://0xreisearch.github.io/AI-algos-interactive/](https://0xreisearch.github.io/AI-algos-interactive/)
+
+## Structure
+Each algorithm has its own:
+- Interactive visualization
+- Detailed explanation
+- Real-time computation display
+- Training data examples
+
+## Running Locally
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/AI-algos-interactive.git
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+## Tech Stack
+
+- React
+- Vite
+- TailwindCSS
+- Recharts
