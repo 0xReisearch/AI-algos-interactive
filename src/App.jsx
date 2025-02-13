@@ -1,5 +1,6 @@
 import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import NaiveBayesDemo from './algorithms/naive-bayes/NaiveBayesDemo';
+import KNNDemo from './algorithms/k-nearest-neighbor/KNNDemo';
 
 function App() {
   return (
@@ -25,11 +26,15 @@ function App() {
                   <h2 className="text-xl font-bold text-white mb-2">Naive Bayes Classifier</h2>
                   <p className="text-gray-300">Interactive demonstration of text classification using Naive Bayes algorithm.</p>
                 </Link>
-                {/* More algos to come! */}
+                <Link to="knn" className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                  <h2 className="text-xl font-bold text-white mb-2">K-Nearest Neighbors</h2>
+                  <p className="text-gray-300">Interactive pattern matching using K-Nearest Neighbors algorithm.</p>
+                </Link>
               </div>
             </div>
           } />
           <Route path="naive-bayes" element={<NaiveBayesDemo />} />
+          <Route path="knn" element={<KNNDemo />} />
         </Routes>
       </div>
     </HashRouter>
