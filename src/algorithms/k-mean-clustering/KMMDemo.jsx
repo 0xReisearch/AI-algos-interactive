@@ -77,7 +77,7 @@ const KMeansColorDemo = () => {
     const newCentroids = currentClusters.map((cluster, idx) => {
       if (cluster.length === 0) {
         const randomIndex = Math.floor(Math.random() * pixels.length);
-        newCentroids[index] = { ...pixels[randomIndex] };
+        return { ...pixels[randomIndex] };
       }
       
       const sum = cluster.reduce((acc, pixel) => ({
@@ -91,14 +91,6 @@ const KMeansColorDemo = () => {
         g: Math.round(sum.g / cluster.length),
         b: Math.round(sum.b / cluster.length)
       };
-    });
-
-    // Handle empty clusters
-    newCentroids.forEach((centroid, index) => {
-      if (centroid === null) {
-        const randomIndex = Math.floor(Math.random() * pixels.length);
-        newCentroids[index] = { ...pixels[randomIndex] };
-      }
     });
 
     setCentroids(newCentroids);
@@ -118,7 +110,7 @@ const KMeansColorDemo = () => {
     const newClusters = assignToClusters(pixels, centroids);
     const newCentroids = updateCentroids(newClusters);
     
-    if (hasConverged(centroids, newCentroids) || iteration > 50) {
+    if (hasConverged(centroids, newCentroids) || iteration > 15) {
       setIsRunning(false);
       setPhase('complete');
     }
