@@ -153,7 +153,7 @@ const KMeansColorDemo = () => {
       }
       
       // Calculate dimensions
-      const maxSize = 300;
+      const maxSize = 1024;
       let width = loadedImg.width;
       let height = loadedImg.height;
       
@@ -174,9 +174,11 @@ const KMeansColorDemo = () => {
       // Get image data
       const imageData = ctx.getImageData(0, 0, width, height);
       
-      // Sample pixels
+      // Sample pixels - ensure we get at least 2000 samples but not more than 5000
       const sampledPixels = [];
-      const skipFactor = Math.max(1, Math.ceil((width * height) / 1000));
+      const targetSamples = 3000;
+      const totalPixels = width * height;
+      const skipFactor = Math.max(1, Math.floor(Math.sqrt(totalPixels / targetSamples)));
       
       for (let y = 0; y < height; y += skipFactor) {
         for (let x = 0; x < width; x += skipFactor) {
