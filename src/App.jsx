@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import NaiveBayesDemo from './algorithms/naive-bayes/NaiveBayesDemo';
 import KNNDemo from './algorithms/k-nearest-neighbor/KNNDemo';
 import KMeansColorDemo from './algorithms/k-mean-clustering/KMMDemo';
+import NNDemo from './algorithms/neural-network/NNDemo';
 
 function App() {
   return (
@@ -35,12 +36,17 @@ function App() {
                   <h2 className="text-xl font-bold text-white mb-2">K-Means Color Clustering</h2>
                   <p className="text-gray-300">Interactive color palette extraction using K-Means clustering algorithm.</p>
                 </Link>
+                <Link to="neural-network" className="p-6 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                  <h2 className="text-xl font-bold text-white mb-2">Neural Network: Brain in Code</h2>
+                  <p className="text-gray-300">Interactive XOR problem solver using a simple neural network with visualized weights, biases, and backpropagation.</p>
+                </Link>
               </div>
             </div>
           } />
           <Route path="naive-bayes" element={<NaiveBayesDemo />} />
           <Route path="knn" element={<KNNDemo />} />
           <Route path="kmeans" element={<KMeansColorDemo />} />
+          <Route path="neural-network" element={<NNDemo />} />
         </Routes>
       </div>
     </HashRouter>
